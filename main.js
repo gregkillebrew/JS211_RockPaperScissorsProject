@@ -15,6 +15,41 @@ const rl = readline.createInterface({
 const rockPaperScissors = (hand1, hand2) => {
 
   // Write code here
+
+  hand1 = hand1.toLowerCase()
+  hand2 = hand2.toLowerCase()
+  
+  hand1 = hand1.trim()
+  hand2 = hand2.trim()
+
+  if ( (hand1 == "rock" && hand2 == "rock") || (hand1 == "paper" && hand2 == "paper") || (hand1 == "scissors" && hand2 == "scissors"))
+{
+  console.log ("Tie!")
+
+   return "It's a tie!"
+}
+
+ else if ( (hand1 == "rock" && hand2 == "scissors") || (hand1 == "scissors" && hand2 == "paper") || (hand1 == "paper" && hand2 == "rock"))
+{
+  console.log("Hand one wins!")
+
+  return "Hand one wins!"
+}
+
+else if ( (hand1 == "scissors" && hand2 == "rock") || (hand1 == "paper" && hand2 == "scissors") || (hand1 == "rock" && hand2 == "paper"))
+{
+    console.log("Hand two wins!")
+  
+    return "Hand two wins!"
+}
+
+  else {
+    getPrompt()
+  }
+
+
+
+
   // Use the unit test to see what is expected
 
 }
